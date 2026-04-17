@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bodhitrí — Holding Empresarial</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+<div class="progress-bar" id="progress"></div>
+
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="https://img1.wsimg.com/isteam/ip/821d0e7c-3756-416a-8ad4-8a2f296c4381/imagen_2026-01-27_110832000.png/:/rs=h:175,m">
+    BODHITRÍ
+  </a>
+  <ul class="nav-links">
+    <li><a data-panel="0">Inicio</a></li>
+    <li><a data-panel="1">Empresas</a></li>
+    <li><a data-panel="2">Filosofía</a></li>
+    <li><a data-panel="3">Métricas</a></li>
+  </ul>
+  <button class="nav-cta">Contacto</button>
+</nav>
+
+<div class="nav-dots" id="navDots">
+  <button class="nav-dot light active" data-target="0"></button>
+  <button class="nav-dot" data-target="1"></button>
+  <button class="nav-dot" data-target="2"></button>
+  <button class="nav-dot light" data-target="3"></button>
+</div>
+
+<div class="scroll-hint" id="scrollHint">
+  <div class="scroll-dot"></div>
+  <span>scroll</span>
+</div>
+
+<div class="stage">
+
+  <!-- 0: HERO -->
+  <div class="panel panel-hero active" id="panel0">
+    <canvas id="ringCanvas"></canvas>
+    <div class="hero-left">
+      <p class="hero-tag">Holding Empresarial · Colombia</p>
+      <h1 class="hero-title">Raíces<br>que<br><em>sostienen</em></h1>
+      <p class="hero-desc">Bodhitrí es un holding de empresas de servicios tecnológicos, operativos y profesionales. Construimos valor de largo plazo.</p>
+      <div class="hero-btns">
+        <button class="btn-p">Nuestras empresas</button>
+        <button class="btn-g">Conócenos</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img id="logoCenter" src="https://img1.wsimg.com/isteam/ip/821d0e7c-3756-416a-8ad4-8a2f296c4381/imagen_2026-01-27_110832000.png/:/rs=h:175,m">
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Empresas</div></div>
+        <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Años</div></div>
+        <div class="stat"><div class="stat-num">COL</div><div class="stat-label">Colombia</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1: EMPRESAS -->
+  <div class="panel panel-companies" id="panel1">
+    <p class="sec-tag" style="color:var(--arena)">Portafolio</p>
+    <h2 class="sec-title">Empresas del grupo</h2>
+    <div class="companies-grid">
+      <div class="c-card"><div class="c-num">01</div><div class="c-icon">EZ</div><div class="c-name">EZGO S.A.S.</div><div class="c-sector">Tecnología &amp; Operaciones</div><div class="c-desc">Soluciones TI integrales, infraestructura y sistemas de información para empresas colombianas.</div></div>
+      <div class="c-card"><div class="c-num">02</div><div class="c-icon">WR</div><div class="c-name">Laboratorio WR</div><div class="c-sector">Servicios de Laboratorio</div><div class="c-desc">Análisis especializados con estándares de calidad internacional para sectores industrial y salud.</div></div>
+      <div class="c-card"><div class="c-num">03</div><div class="c-icon">NV</div><div class="c-name">Nueva Vansolix</div><div class="c-sector">Comercio &amp; Distribución</div><div class="c-desc">Distribución estratégica con cobertura nacional y cadena de suministro optimizada.</div></div>
+      <div class="c-card"><div class="c-num">04</div><div class="c-icon">CM</div><div class="c-name">Casa La Mantilla</div><div class="c-sector">Hospitalidad &amp; Experiencias</div><div class="c-desc">Espacio con identidad cultural colombiana para experiencias auténticas de alto valor.</div></div>
+      <div class="c-card"><div class="c-num">05</div><div class="c-icon">BD</div><div class="c-name">Bodhitrí S.A.S.</div><div class="c-sector">Gestión del Holding</div><div class="c-desc">Coordinación estratégica, finanzas corporativas y gobierno de las empresas del grupo.</div></div>
+      <div class="c-card" style="background:rgba(21,45,12,.03)"><div class="c-num" style="opacity:.2">—</div><p style="margin-top:.8rem;font-size:.78rem;font-weight:300;color:rgba(21,45,12,.35);line-height:1.6">En búsqueda de nuevas oportunidades que aporten valor al grupo.</p><p style="margin-top:1.2rem;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--arena)">Próxima empresa →</p></div>
+    </div>
+  </div>
+
+  <!-- 2: FILOSOFÍA -->
+  <div class="panel panel-philosophy" id="panel2">
+    <div>
+      <p class="sec-tag" style="color:rgba(249,237,220,.55)">Quiénes somos</p>
+      <h2 class="phil-title">Crear<br>valor con<br><em>raíces</em></h2>
+    </div>
+    <div>
+      <p class="phil-quote">"Construimos desde adentro: con personas comprometidas, decisiones con propósito y relaciones de confianza duraderas."</p>
+      <div class="val-item"><div class="val-dot"></div><div class="val-text">Gestión transparente y gobierno sólido</div></div>
+      <div class="val-item"><div class="val-dot"></div><div class="val-text">Visión de largo plazo sobre el resultado inmediato</div></div>
+      <div class="val-item"><div class="val-dot"></div><div class="val-text">Personas primero, procesos después</div></div>
+      <div class="val-item"><div class="val-dot"></div><div class="val-text">Tecnología como herramienta, no como fin</div></div>
+    </div>
+  </div>
+
+  <!-- 3: MÉTRICAS -->
+  <div class="panel panel-metrics" id="panel3">
+    <div class="m-item"><div class="m-num" id="mn0">0<span>+</span></div><div class="m-label">Empresas activas</div></div>
+    <div class="m-item"><div class="m-num" id="mn1">0<span>°</span></div><div class="m-label">Gestión integral</div></div>
+    <div class="m-item"><div class="m-num" id="mn2">0<span>+</span></div><div class="m-label">Años construyendo</div></div>
+    <div class="m-item"><div class="m-num">COL<span></span></div><div class="m-label">Con raíces colombianas</div></div>
+  </div>
+
+</div>
+
+<button id="forestBtn" title="Activar sonido del bosque">
+  <svg class="icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+  </svg>
+  <svg class="icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+  </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
