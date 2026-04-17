@@ -93,3 +93,83 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 #forestBtn.active .icon-off{display:none;}
 #forestBtn .icon-on{display:none;}
 #forestBtn.active .icon-on{display:block;}
+
+/* ── Responsive ── */
+
+/* Touch: ocultar cursor personalizado */
+@media (hover:none){
+  #cursor,#cursor-trail{display:none}
+  body{cursor:auto}
+}
+
+/* Tablet: 768px – 1023px */
+@media (min-width:768px) and (max-width:1023px){
+  nav{padding:1rem 2.5rem}
+  .nav-logo img{width:80px;height:80px}
+  .hero-left{padding:6rem 2rem 3rem 2.5rem}
+  .hero-right{padding:6rem 1.5rem 3rem}
+  #logoCenter{width:clamp(180px,22vmin,260px);height:clamp(180px,22vmin,260px)}
+  .panel-companies{padding:6rem 2.5rem 3rem}
+  .companies-grid{grid-template-columns:repeat(2,1fr)}
+  .panel-philosophy{padding:6rem 2.5rem;gap:3rem}
+  .panel-metrics{grid-template-columns:repeat(2,1fr)}
+  .m-item:nth-child(even){border-right:none}
+  .m-item:nth-child(-n+2){border-bottom:1px solid rgba(249,237,220,.08)}
+  .m-item:last-child{border-bottom:none}
+}
+
+/* Mobile: < 768px */
+@media (max-width:767px){
+  /* Nav */
+  nav{padding:.8rem 1.25rem}
+  .nav-logo img{width:52px;height:52px}
+  .nav-links{display:none}
+  .nav-cta{padding:.5rem .9rem;font-size:.68rem}
+  .nav-dots{right:.75rem}
+  .scroll-hint{bottom:1.25rem}
+
+  /* Hero: columna única */
+  .panel-hero{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .hero-right{
+    order:1;
+    padding:4.5rem 1.5rem 1rem;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1.5rem
+  }
+  #logoCenter{width:clamp(90px,26vmin,140px);height:clamp(90px,26vmin,140px)}
+  .stat-num{font-size:1.6rem}
+  .hero-stats{gap:1.5rem}
+  .hero-left{
+    order:2;
+    padding:.75rem 1.5rem 3.5rem;
+    justify-content:flex-start
+  }
+  .hero-desc{max-width:100%;font-size:.82rem}
+
+  /* Empresas */
+  .panel-companies{padding:5.5rem 1.25rem 2rem}
+  .companies-grid{grid-template-columns:1fr}
+  .sec-title{margin-bottom:1.25rem}
+
+  /* Filosofía */
+  .panel-philosophy{
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    padding:5.5rem 1.25rem 3rem;
+    align-items:flex-start;
+    overflow-y:auto
+  }
+
+  /* Métricas */
+  .panel-metrics{grid-template-columns:repeat(2,1fr)}
+  .m-item{padding:1.75rem 1.25rem}
+  .m-item:nth-child(even){border-right:none}
+  .m-item:nth-child(-n+2){border-bottom:1px solid rgba(249,237,220,.08)}
+  .m-item:last-child{border-bottom:none}
+  .m-num{font-size:2.2rem}
+
+  /* Botón sonido */
+  #forestBtn{bottom:1.25rem;right:.75rem;width:40px;height:40px}
+}

@@ -109,7 +109,19 @@ document.addEventListener('wheel',e=>{
 },{passive:false});
 let ty0=0;
 document.addEventListener('touchstart',e=>ty0=e.touches[0].clientY,{passive:true});
-document.addEventListener('touchend',e=>{const d=ty0-e.changedTouches[0].clientY;if(Math.abs(d)>40)goTo(current+(d>0?1:-1),d>0?1:-1);},{passive:true});
+document.addEventListener('touchend',e=>{
+  const d=ty0-e.changedTouches[0].clientY;
+  if(Math.abs(d)>40){
+    const panel=panelEls[current];
+    if(panel.scrollHeight>panel.clientHeight){
+      const atBottom=panel.scrollTop+panel.clientHeight>=panel.scrollHeight-2;
+      const atTop=panel.scrollTop<=0;
+      if(d>0&&!atBottom)return;
+      if(d<0&&!atTop)return;
+    }
+    goTo(current+(d>0?1:-1),d>0?1:-1);
+  }
+},{passive:true});
 document.addEventListener('keydown',e=>{
   if(e.key==='ArrowDown'||e.key==='PageDown')goTo(current+1,1);
   if(e.key==='ArrowUp'||e.key==='PageUp')goTo(current-1,-1);
