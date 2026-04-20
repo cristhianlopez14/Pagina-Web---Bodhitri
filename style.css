@@ -60,6 +60,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
 .c-name{font-size:.95rem;font-weight:600;margin-bottom:.22rem}
 .c-sector{font-size:.64rem;text-transform:uppercase;letter-spacing:.13em;color:var(--arena);font-weight:500;margin-bottom:.7rem}
 .c-desc{font-size:.78rem;font-weight:300;line-height:1.6;color:rgba(21,45,12,.65)}
+
+/* Foundation layout */
+.foundation-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;width:100%;align-items:start}
+.found-main{display:flex;flex-direction:column;gap:1.1rem}
+.found-icon{width:52px;height:52px;background:var(--verde);display:flex;align-items:center;justify-content:center;color:var(--crema);font-size:.95rem;font-weight:700;letter-spacing:.05em}
+.found-motto{font-size:1.15rem;font-weight:500;color:var(--verde);line-height:1.4;border-left:2px solid var(--arena);padding-left:1rem}
+.found-desc{font-size:.85rem;font-weight:300;line-height:1.8;color:rgba(21,45,12,.65);max-width:400px}
+.found-link{display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--arena);text-decoration:none;border-bottom:1px solid rgba(196,149,106,.35);padding-bottom:.15rem;transition:color .2s,border-color .2s;width:fit-content}
+.found-link:hover{color:var(--verde);border-color:var(--verde)}
+.found-areas{display:flex;flex-direction:column;gap:0;border:1.5px solid rgba(21,45,12,.08)}
+.found-area{padding:1.6rem 1.5rem;border-bottom:1.5px solid rgba(21,45,12,.08);transition:background .2s;cursor:default}
+.found-area:last-child{border-bottom:none}
+.found-area:hover{background:rgba(21,45,12,.03)}
+.found-area-num{font-size:.64rem;letter-spacing:.2em;color:var(--arena);font-weight:500;margin-bottom:.55rem}
+.found-area-name{font-size:.92rem;font-weight:600;color:var(--verde);margin-bottom:.4rem}
+.found-area-desc{font-size:.78rem;font-weight:300;line-height:1.6;color:rgba(21,45,12,.6)}
+
 .panel-philosophy{background:var(--arena);display:grid;grid-template-columns:1fr 1fr;gap:5rem;padding:calc(var(--nav-h) + 2.5rem) 4.5rem 4.5rem;align-items:center}
 .phil-title{font-size:clamp(2.2rem,3.8vw,3.8rem);font-weight:600;line-height:.88;color:var(--crema)}
 .phil-title em{font-style:normal;color:var(--verde-oscuro)}
@@ -111,6 +128,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
   .hero-right{padding:6rem 1.5rem 3rem}
   #logoCenter{width:clamp(180px,22vmin,260px);height:clamp(180px,22vmin,260px)}
   .companies-grid{grid-template-columns:repeat(2,1fr)}
+  .foundation-layout{grid-template-columns:1fr;gap:2rem}
   .panel-philosophy{gap:3rem}
   .panel-metrics{grid-template-columns:repeat(2,1fr)}
   .m-item:nth-child(even){border-right:none}
@@ -149,9 +167,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:cen
   }
   .hero-desc{max-width:100%;font-size:.82rem}
 
-  /* Empresas */
+  /* Fundación / Empresas */
   .panel-companies{padding:5.5rem 1.25rem 2rem}
   .companies-grid{grid-template-columns:1fr}
+  .foundation-layout{grid-template-columns:1fr;gap:1.5rem}
   .sec-title{margin-bottom:1.25rem}
 
   /* Filosofía */
